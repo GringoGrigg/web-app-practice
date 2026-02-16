@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akan Name Generator - Ghanaian Day Names</title>
+    <!-- Link to CSS file (we'll create this next) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Main container for the entire application -->
+    <div class="container">
+        
+        <!-- Header section with title and description -->
+        <header class="header">
+            <h1>🇬🇭 Akan Name Generator</h1>
+            <p class="description">
+                Discover your Ghanaian day name! In Ghanaian culture, children are given 
+                their first name based on the day of the week they were born. 
+                Enter your birthday and gender below to find out your Akan name.
+            </p>
+        </header>
+
+        <!-- Main content area containing the form and result -->
+        <main class="main-content">
+            
+            <!-- Left column - Form section (using float) -->
+            <div class="form-column">
+                <h2>Enter Your Details</h2>
+                
+                <!-- Form for user input -->
+                <form id="akanForm" class="akan-form">
+                    
+                    <!-- Birthday section -->
+                    <fieldset class="form-group">
+                        <legend>Your Birthday</legend>
+                        
+                        <!-- Day input -->
+                        <div class="input-group">
+                            <label for="day">Day:</label>
+                            <input 
+                                type="number" 
+                                id="day" 
+                                name="day" 
+                                min="1" 
+                                max="31" 
+                                placeholder="DD" 
+                                required
+                            >
+                            <small class="hint">Enter day (1-31)</small>
+                        </div>
+
+                        <!-- Month input -->
+                        <div class="input-group">
+                            <label for="month">Month:</label>
+                            <input 
+                                type="number" 
+                                id="month" 
+                                name="month" 
+                                min="1" 
+                                max="12" 
+                                placeholder="MM" 
+                                required
+                            >
+                            <small class="hint">Enter month (1-12)</small>
+                        </div>
+
+                        <!-- Year input -->
+                        <div class="input-group">
+                            <label for="year">Year:</label>
+                            <input 
+                                type="number" 
+                                id="year" 
+                                name="year" 
+                                min="1900" 
+                                max="2024" 
+                                placeholder="YYYY" 
+                                required
+                            >
+                            <small class="hint">Enter year (1900-2024)</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Gender selection section -->
+                    <fieldset class="form-group">
+                        <legend>Your Gender</legend>
+                        
+                        <div class="radio-group">
+                            <!-- Male option -->
+                            <div class="radio-option">
+                                <input 
+                                    type="radio" 
+                                    id="male" 
+                                    name="gender" 
+                                    value="male" 
+                                    required
+                                >
+                                <label for="male">Male</label>
+                            </div>
+
+                            <!-- Female option -->
+                            <div class="radio-option">
+                                <input 
+                                    type="radio" 
+                                    id="female" 
+                                    name="gender" 
+                                    value="female" 
+                                    required
+                                >
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit button -->
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn" class="btn btn-primary">
+                            Get My Akan Name
+                        </button>
+                        
+                        <!-- Reset button (optional) -->
+                        <button type="reset" class="btn btn-secondary">
+                            Reset Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right column - Results section (using float) -->
+            <div class="result-column">
+                <h2>Your Akan Name</h2>
+                
+                <!-- Result card where output will be displayed -->
+                <div id="resultCard" class="result-card">
+                    <!-- Placeholder content - will be replaced by JavaScript -->
+                    <p class="result-placeholder">
+                        👈 Fill in the form and click submit to see your Akan name!
+                    </p>
+                    
+                    <!-- Result content (initially hidden) -->
+                    <div id="resultContent" class="result-content hidden">
+                        <h3 id="resultTitle">Your Akan name is:</h3>
+                        <p id="akanName" class="akan-name"></p>
+                        <p id="birthdayInfo" class="birthday-info"></p>
+                    </div>
+
+                    <!-- Error message (initially hidden) -->
+                    <div id="errorMessage" class="error-message hidden"></div>
+                </div>
+
+                <!-- Reference table for Akan names -->
+                <div class="reference-table">
+                    <h3>Quick Reference</h3>
+                    
+                    <!-- Male names table -->
+                    <div class="names-table">
+                        <h4>Male Names</h4>
+                        <ul class="names-list">
+                            <li>Sunday: Kwasi</li>
+                            <li>Monday: Kwadwo</li>
+                            <li>Tuesday: Kwabena</li>
+                            <li>Wednesday: Kwaku</li>
+                            <li>Thursday: Yaw</li>
+                            <li>Friday: Kofi</li>
+                            <li>Saturday: Kwame</li>
+                        </ul>
+                    </div>
+
+                    <!-- Female names table -->
+                    <div class="names-table">
+                        <h4>Female Names</h4>
+                        <ul class="names-list">
+                            <li>Sunday: Akosua</li>
+                            <li>Monday: Adwoa</li>
+                            <li>Tuesday: Abenaa</li>
+                            <li>Wednesday: Akua</li>
+                            <li>Thursday: Yaa</li>
+                            <li>Friday: Afua</li>
+                            <li>Saturday: Ama</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer section -->
+        <footer class="footer">
+            <p>© 2024 Akan Name Generator - A Ghanaian Tradition</p>
+            <p class="credit">Built as part of Independent Project</p>
+        </footer>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
